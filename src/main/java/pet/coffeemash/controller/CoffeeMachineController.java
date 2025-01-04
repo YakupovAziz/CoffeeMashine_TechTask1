@@ -21,7 +21,7 @@ public class CoffeeMachineController {
     private RecipeService recipeService;
 
     @GetMapping("/statistics/popular")
-    public String popularRecipe() {
+    public ResponseEntity<Long> popularRecipe() {
         return orderService.findPopularRecipe();
     }
 
